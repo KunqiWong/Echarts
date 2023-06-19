@@ -1,8 +1,6 @@
 /**
  * 柱状图
  */
-import React, { useEffect } from 'react'
-import { useGlobalContext } from '@/hooks/useGlobalContext'
 import Bar1 from './components/Bar1'
 import Bar2 from './components/Bar2'
 import Bar3 from './components/Bar3'
@@ -17,12 +15,6 @@ const gridboxList = [
 ]
 
 const Bar = () => {
-  const { setScrollTop } = useGlobalContext()
-
-  useEffect(() => {
-    setScrollTop(0)
-  }, [])
-
   return (
     <div className={styles.container}>
       {gridboxList.map((item: { element: React.ReactNode }, index: number) => (
